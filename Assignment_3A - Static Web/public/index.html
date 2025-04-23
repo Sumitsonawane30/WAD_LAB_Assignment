@@ -1,0 +1,142 @@
+<!-- <div><form action="">
+    <label for="message">Your Name</label><br>
+    <input type="text" placeholder="Enter Your Name:"><br><br>
+    <label for="message">Your Roll-No</label><br>
+    <input type="Number" placeholder="Enter Roll No.:"><br><br>
+    <button>Submit</button>
+</form></div> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stylish Form</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #4ed3d3, #c51944);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .form-container {
+      background-color: #ffffff10;
+      padding: 30px 40px;
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+      width: 350px;
+    }
+
+    .form-container h2 {
+      color: #fff;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      color: #f0f0f0;
+      font-weight: 500;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 12px;
+      background: #ffffff20;
+      color: #fff;
+      transition: 0.3s ease;
+      font-size: 16px;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus {
+      outline: none;
+      background: #ffffff40;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background: #00ffe7;
+      color: #00353e;
+      border: none;
+      border-radius: 15px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #00c7b5;
+      color: #fff;
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your name" />
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your email" />
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" rows="4" placeholder="Your message..."></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const form = document.getElementById('contactForm');
+
+    // Log changes to the console
+    [nameInput, emailInput, messageInput].forEach((input) => {
+      input.addEventListener('input', () => {
+        console.log(`${input.id} changed to: ${input.value}`);
+      });
+    });
+
+    // Log form submission
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // Prevent real form submission
+      console.log('Form Submitted!');
+      console.log(`Name: ${nameInput.value}`);
+      console.log(`Email: ${emailInput.value}`);
+      console.log(`Message: ${messageInput.value}`);
+      alert("Form submitted! Check the console for details.");
+    });
+  </script>
+</body>
+</html>
