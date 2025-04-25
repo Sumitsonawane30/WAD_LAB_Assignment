@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Login & Register</title>
+
+	<!-- jQuery Mobile Theme -->
+	<link rel="stylesheet" href="themes/First_theme.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+
+	<!-- jQuery & jQuery Mobile -->
+	<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+	<style>
+		.ui-content {
+			padding-top: 20px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Login Page -->
+	<div data-role="page" id="login" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h1>Login</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<form>
+				<label for="login-email">Email:</label>
+				<input type="email" name="login-email" id="login-email" placeholder="you@example.com">
+
+				<label for="login-password">Password:</label>
+				<input type="password" name="login-password" id="login-password" placeholder="Your password">
+
+				<input type="submit" value="Login" class="ui-btn ui-btn-b">
+
+				<p>Don't have an account?</p>
+				<a href="#register" class="ui-btn ui-mini ui-btn-inline">Register</a>
+			</form>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; 2025 MyApp</h4>
+		</div>
+	</div>
+
+	<!-- Register Page -->
+	<div data-role="page" id="register" data-theme="a">
+		<div data-role="header" data-position="fixed">
+			<h1>Register</h1>
+		</div>
+
+		<div role="main" class="ui-content">
+			<form>
+				<label for="reg-name">Name:</label>
+				<input type="text" name="reg-name" id="reg-name" placeholder="Your full name">
+
+				<label for="reg-email">Email:</label>
+				<input type="email" name="reg-email" id="reg-email" placeholder="you@example.com">
+
+				<label for="reg-password">Password:</label>
+				<input type="password" name="reg-password" id="reg-password" placeholder="Create a password">
+
+				<input type="submit" value="Register" class="ui-btn ui-btn-b">
+
+				<p>Already have an account?</p>
+				<a href="#login" class="ui-btn ui-mini ui-btn-inline">Back to Login</a>
+			</form>
+		</div>
+
+		<div data-role="footer" data-position="fixed">
+			<h4>&copy; 2025 MyApp</h4>
+		</div>
+	</div>
+
+</body>
+
+</html>
