@@ -23,4 +23,10 @@ $(document).ready(function () {
             renderUsers(); // Update the user list dynamically
         }
     });
+    //To delete all users
+    // $("#delete").click(function () {
+    //     users = []; // Clear the entire users array
+    //     localStorage.removeItem("users"); // Or use setItem with empty array if you prefer
+    //     renderUsers(); // Update the UI
+    // });
 });
